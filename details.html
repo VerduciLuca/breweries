@@ -13,19 +13,15 @@
     <h1>BESTBREW</h1>
 </div>
         <div class="btn-div">
-            <button onclick="previous()">Previous</button>
-            <button onclick="next()">Next</button>
+            <button onclick="getBack()">Go back</button>
         </div>
     </header>
-    <div id="main-container">
+    <div id="details-container">
 
     </div>
-
-    <footer>
-        <p class="fp">Find the best breweries, find the best beer.</p>
-    </footer>
+    <iframe class="map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=${brewery.longitude}%2C${brewery.latitude}&amp;marker=${brewery.latitude}%2C${brewery.longitude}" style="border: 1px solid black"></iframe>
 </body>
 <script src="./db-service.js"></script>
-<script src="./script.js"></script>
 <script src="details.js"></script>
+<script src="script.js"></script>
 </html>
