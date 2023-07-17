@@ -1,5 +1,5 @@
 function getDetails(brewery){
-    window.location.href='details.html';
+    window.location.href='details.html?id=' + brewery.id;
     console.log(brewery);
 }
 
