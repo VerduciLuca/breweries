@@ -38,11 +38,13 @@ for (let i = 0; i < breweries.length; i++) {
     const nodeState = document.createTextNode(brewery.state);
 
     nameCard.appendChild(nodeName);
-    stateCard.appendChild(nodeState);
-
     breweryCard.appendChild(nameCard);
+    stateCard.appendChild(nodeState);
     breweryCard.appendChild(stateCard);
 
+
+    
+    
     const detailBtn = document.createElement('button')
     const btnText = document.createTextNode('details')
 
@@ -55,11 +57,20 @@ for (let i = 0; i < breweries.length; i++) {
     
 
     mainDiv.appendChild(breweryCard);
-
+        
     }
 }
 
 let pageNumber = 1;
+
+
+function createElementWithString(elementName,contentString){
+    const element = document.createElement(elementName);
+    const node = document.createTextNode (contentString);
+    element.appendChild(node)
+    return element
+
+}
 
 function previous() {
     // alert('ciao')
